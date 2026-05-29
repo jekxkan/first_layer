@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  sqlite:
+    image: alpine:latest
+    container_name: sqlite
+    volumes:
+      - ./data:/data
+    working_dir: /data
+    command: sh -c "apk add --no-cacdocker exec -it sqlite shhe sqlite && sleep infinity"
